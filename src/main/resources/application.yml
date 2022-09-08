@@ -1,0 +1,20 @@
+server:
+  port: 8082
+spring:
+  h2:
+    console:
+      enable: true
+  application:
+    name: 'retrieve data from access to expose as json'
+    mvc:
+      pathmatch:
+        use-suffix-pattern: true
+        matching-strategy: ant-path-matcher
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui
+  pathsToMatch: /**
